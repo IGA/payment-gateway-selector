@@ -23,6 +23,16 @@ docker compose exec app php artisan migrate
 docker compose exec app php artisan queue:work
 ```
 
+## Test
+```
+docker compose exec app php artisan test
+```
+
+## Debug Tool
+```
+http://localhost:8080/telescope
+```
+
 ## Tech Stack
 - Laravel 12
 - PHP 8.3
