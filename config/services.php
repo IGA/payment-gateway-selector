@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'pos_rates' => [
+        'endpoint' => env('POS_RATES_ENDPOINT'),
+    ]
+
 ];

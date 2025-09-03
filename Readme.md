@@ -20,6 +20,7 @@ git clone https://github.com/IGA/payment-gateway-selector
 cd payment-gateway-selector
 docker compose up -d --build
 docker compose exec app php artisan migrate
+docker compose exec app php artisan queue:work
 ```
 
 ## Tech Stack
