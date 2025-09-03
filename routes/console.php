@@ -12,3 +12,7 @@ Schedule::job(new UpdatePosRatesJob)
     ->dailyAt('23:59')
     ->timezone('Europe/Istanbul')
     ->withoutOverlapping();
+
+//Schedule::job(new UpdatePosRatesJob)
+//    ->everyMinute()
+//    ->withoutOverlapping();

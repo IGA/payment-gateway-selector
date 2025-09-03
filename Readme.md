@@ -23,6 +23,9 @@ docker compose up -d --build
 docker compose exec app composer install
 docker compose exec app php artisan migrate
 docker compose exec app php artisan queue:work
+
+# To retrieve POS rates via MockAPI, open the commented-out code in the routes/console.php file and run the following command:
+docker compose exec app php artisan schedule:run
 ```
 
 ## Test
