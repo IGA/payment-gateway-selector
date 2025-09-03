@@ -15,8 +15,12 @@ class PaymentController extends Controller
 
         $best = $this->posSelectionService->selectProvider($paymentDTO);
         if (null === $best) {
-            return response()->json(['error' => 'Uygun bir POS bulunamadi.'], 404);
+            return response()->json(['error' => 'Not found an available provider.'], 404);
         }
+
+        \Log::info("Selected provider", [
+            'provider' => $best,
+        ]);
 
         return response()->json([
             'filters' => $paymentDTO,

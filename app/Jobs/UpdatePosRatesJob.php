@@ -45,7 +45,10 @@ class UpdatePosRatesJob implements ShouldQueue
                     );
                 }
             } else {
-                // TODO: Logging
+                \Log::error("An error acquired while fetching pos rates", [
+                    'response' => $response,
+                    'endpoint'   => $endpoint,
+                ]);
             }
         } catch (\Throwable $exception) {
             \Log::error($exception->getMessage(), ['exception' => $exception]);
